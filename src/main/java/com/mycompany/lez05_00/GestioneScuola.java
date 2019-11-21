@@ -190,11 +190,6 @@ public class GestioneScuola extends javax.swing.JFrame {
         jnomecorso.setText("nessun corso");
 
         bAddAlunno.setText("Add alunno");
-        bAddAlunno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bAddAlunnoActionPerformed(evt);
-            }
-        });
 
         jScrollPane3.setViewportView(elencoAlunniCorso);
 
@@ -344,21 +339,6 @@ public class GestioneScuola extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_tindexcorsoPropertyChange
-
-    private void bAddAlunnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddAlunnoActionPerformed
-        // TODO add your handling code here:
-
-        String nomeAlunno = tnomeAlunno.getText();
-        String cognomeAlunno = tcognomeAlunno.getText();
-        Alunno al1 = new Alunno(nomeAlunno, cognomeAlunno);
-        elencoCorsi.get(idxCorsoCurrent).getRegistro().add(al1);
-        String tabellone = elencoCorsi.get(idxCorsoCurrent).getrowAlunniCorso();
-        elencoAlunniCorso.setText(tabellone);
-        tnomeAlunno.setText(" ");
-        tcognomeAlunno.setText("");
-
-
-    }//GEN-LAST:event_bAddAlunnoActionPerformed
 
     /**
      * @param args the command line arguments
